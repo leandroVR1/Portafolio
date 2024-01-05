@@ -23,9 +23,16 @@ h1 {
 .container1 h1 {
   font-family: 'Skranji', cursive;
   font-weight: 700;
-  background:linear-gradient(to right,#56641b,#2c2b16,#e63600);
+  background: -webkit-linear-gradient(right, #56641b,#2c2b16,#e63600);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   background-clip: text;
-  color: transparent;  
+  font-size: 132px;
+  
+
+
+ 
+
 }
 
 .container2 {
