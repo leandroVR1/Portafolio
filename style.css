@@ -1,3 +1,32 @@
 #logo{
 border-radius: 60%;
 }
+
+.h2 {
+    font-family: 'Agbalumo', system-ui;
+    font-family: 'Bungee Spice', sans-serif;
+    font-family: 'Press Start 2P', system-ui;
+    font-weight: 700;
+    background: -webkit-linear-gradient(right, #f4ffca,#79ffd2,#f4ffca);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 22px;
+ 
+  }
+
+  .card-body{
+    background: -webkit-linear-gradient(right, #f4ffca,#79ffd2,#f4ffca);
+  }
+
+  p{
+    font-family: 'Agbalumo', system-ui;
+    font-family: 'Bungee Spice', sans-serif;
+    font-family: 'Press Start 2P', system-ui;
+    font-weight: 700;
+    background: -webkit-linear-gradient(right, #000000,#00b97c,#000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 22px;
+  }
