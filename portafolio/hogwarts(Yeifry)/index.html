@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/diseño.css">
+    <script src="js/funcionalidad.js"></script>
+    <title>Document</title>
+</head>
+<body>
+ 
+  <div class="contenedor">
+           <header>
+               <img id="header-image" src="img/fondo.jpg" alt="">
+               <p id="textoHeader">Conoce tu narrativa en Hogwarts</p>
+           </header>
+           <br><br><br><br>
+       <div class="formulario">
+           <input type="text" id="objName" name="name" placeholder="Nombre">
+           <br>
+           <br>
+           <input type="number" id="objAge" name="age" placeholder="Edad">
+           <br>
+           <br>
+           <input type="text" id="objFamily" name="family" placeholder="Familia">
+           <br>
+           <br>
+   
+           <select name="linaje" id="objLinaje">
+               <option value="mestizo">Mestizo</option>
+               <option value="muggle">Muggle</option>
+               <option value="sangre pura">Sangre pura</option>
+           </select>
+   
+           <select name="Cualidades" id="objCualidades">
+               <option value="valor,fuerza,audacia">Valor, Fuerza, Audacia</option>
+               <option value="ambición,determinación,astucia">Ambición, Determinación, Astucia</option>
+               <option value="creatividad,erudición,inteligencia">Creatividad, Erudición, Inteligencia</option>
+               <option value="justicia,lealtad,paciencia">Justicia, Lealtad, Paciencia</option>
+           </select>
+           <br><br>
+   
+           <button onclick="llamar()">Enviar</button>
+           <button onclick="asignarCasa()">Enviar</button>
+   
+           <div id="prueba"></div>
+       </div>
+   </div>
+</body>
+</html>
