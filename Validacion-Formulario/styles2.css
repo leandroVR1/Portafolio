@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Skranji:wght@400;700&family=Ubuntu+Condensed&display=swap');
+
+
+body {
+  background:linear-gradient(to right,#e06823,#f8f532,#d83807);
+  margin: 0;
+}
+
+h1 {
+  font-size: 120px;
+  color: white;
+}
+
+.containers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 98%; /* Ancho máximo del contenedor principal */
+  margin: auto; /* Centrar el contenedor en la página */
+}
+
+.container1 h1 {
+  font-family: 'Skranji', cursive;
+  font-weight: 700;
+  background:linear-gradient(to right,#56641b,#2c2b16,#e63600);
+  background-clip: text;
+  color: transparent;  
+}
+
+.container2 {
+   /* Que ocupe el espacio restante */
+  max-width: 53.8%; /* Ancho máximo del container2 */
+
+}
+
+
+
+.container2 img {
+  width:100%; /* La imagen ocupará el 100% del ancho de container2 */
+ 
+  border-radius: 4%;
+  
+}
+
+
+
+
+
