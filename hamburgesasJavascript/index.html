@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let navbar = document.createElement('nav');
+        navbar.classList='navbar navbar-light';
+        navbar.style.backgroundColor='rgba(255, 0, 0, 0.945)';
+
+        let a = document.createElement('a');
+        a.classList='navbar-brand';
+        a.href='#';
+
+        let navbarImage = document.createElement('img');
+        navbarImage.src='IMG/kfc.svg';
+        navbarImage.width='80';
+        navbarImage.height='80';
+        navbarImage.classList='d-inline-block vertical-align-top'
+
+        a.appendChild(navbarImage);
+        a.appendChild(document.createTextNode('KFC'));
+        navbar.appendChild(a);
+        document.body.appendChild(navbar);
+        
+        let br=document.createElement('br');
+        document.body.appendChild(br);
+
+        let divContainer= document.createElement('div');
+        divContainer.classList='container-md-3';
+        document.body.appendChild(divContainer);
+
+        let divRow= document.createElement('div');
+        divRow.classList='row';
+        divContainer.appendChild(divRow);
+
+        let divCol= document.createElement('div');
+        divCol.classList='col-md-6';
+        divRow.appendChild(divCol);
+
+        let selectIdioma= document.createElement('select');
+        selectIdioma.id='restaurantSelect';
+        selectIdioma.classList='form-select form-select-lg mb-3';
+   
+
+        let option= document.createElement('option');
+        option.text = 'Seleccione un idioma';
+        option.selected = true;
+        selectIdioma.appendChild(option);
+        let option1= document.createElement('option');
+        option1.value='español';
+        option1.text='Español';
+        selectIdioma.appendChild(option1);
+        let option2= document.createElement('option');
+        option2.value='ingles';
+        option2.text='Ingles';
+        selectIdioma.appendChild(option2);
+        divCol.appendChild(selectIdioma);
+
+        let divCol2= document.createElement('div');
+        divCol2.classList='col-md-6';
+        let selectTema= document.createElement('select');
+        selectTema.id='theme';
+        selectTema.classList='form-select form-select-lg mb-3';
+        let optionTm1= document.createElement('option');
+        optionTm1.value='claro';
+        optionTm1.text='Claro';
+        selectTema.appendChild(optionTm1);
+        let optionTm2= document.createElement('option');
+        optionTm2.value='oscuro';
+        optionTm2.text='Oscuro';
+        selectTema.appendChild(optionTm2);
+        let optionTm3= document.createElement('option');
+        optionTm3.value='rojo';
+        optionTm3.text='Rojo';
+        selectTema.appendChild(optionTm3);
+        divCol2.appendChild(selectTema);
+        divRow.appendChild(divCol2);
+
+        function createHamburguesa(nombre, imagenSrc, precio, descripcion) {
+            let container = document.createElement('div');
+            container.classList = 'col-md-3';
+
+            let containerCard = document.createElement('div');
+            containerCard.classList = 'card p-2 h-100';
+
+            let img = document.createElement('img');
+            img.src = imagenSrc;
+            containerCard.appendChild(img);
+
+            let cardBody = document.createElement('div');
+            cardBody.classList = 'card-body';
+
+            let h2 = document.createElement('h2');
+            h2.classList = 'precio';
+            h2.appendChild(document.createTextNode('$' + precio));
+            cardBody.appendChild(h2);
+
+            let h1 = document.createElement('h1');
+            h1.classList = 'producto';
+            h1.appendChild(document.createTextNode(nombre));
+            cardBody.appendChild(h1);
+
+            let p = document.createElement('p');
+            p.classList = 'descripcion';
+            p.appendChild(document.createTextNode(descripcion));
+            cardBody.appendChild(p);
+
+            containerCard.appendChild(cardBody);
+            container.appendChild(containerCard);
+
+            return container;
+        }
+
+        let divContainerHamburguesas = document.createElement('div');
+        divContainerHamburguesas.classList = 'container-md-7';
+        document.body.appendChild(divContainerHamburguesas);
+
+        let divRowHamburguesas = document.createElement('div');
+        divRowHamburguesas.classList = 'row';
+        divContainerHamburguesas.appendChild(divRowHamburguesas);
+
+        // Crear hamburguesas
+        let hamburguesas = [
+            { nombre: 'BBQ Crunch', imagen: 'IMG/hamburguesa-1.webp', precio: '8.900', descripcion: '1 Sandwich BBQ Crunch (1 Filete de pollo apanado)' },
+            { nombre: 'Kentucky Sandwich', imagen: 'IMG/hamburguesa-2.webp', precio: '16.900', descripcion: '1 Kentucky hamburguesa / Sandwich (1 Filete de pechuga de pollo apanado, peinillos,....)' },
+            { nombre: 'Combo BBQ Crunch', imagen: 'IMG/hamburguesa-3.webp', precio: '15.900', descripcion: '1 Sándwich BBQ Crunch (1 Filete de pollo apanado) + 1 Papa Pequeña + 1 Gaseosa PET 400ml' },
+            { nombre: 'KENTUCKY CORONEL SANDWICH', imagen: 'IMG/hamburguesa-4.webp', precio: '17.900', descripcion: '1 Kentucky Coronel hamburguesa / Sandwich (1 Filete de pechuga de pollo apanado, Ensalada Coleslaw, BBQ y mantequilla)' },
+            { nombre: 'Combo Kentucky Sandwich', imagen: 'IMG/hamburguesa-5.webp', precio: '22.900', descripcion: '1 Kentucky hamburguesa / Sandwich (1 Filete de pechuga de pollo apanado, peinillos,....)' },
+            { nombre: 'Combo Kentucky Coronel Sandwich', imagen: 'IMG/hamburguesa-6.webp', precio: '23.900', descripcion: '1 Kentucky Coronel hamburguesa / Sandwich (1 Filete de pechuga de pollo apanado, Ensalada Coleslaw, BBQ y mantequilla) + 1 Papa Pequeña + 1 Gaseosa PET 400ml' },
+            { nombre: 'KENTUCKY CRISPY BBQ', imagen: 'IMG/hamburguesa-7.webp', precio: '24.900', descripcion: '120g de pechuga de pollo en pan brioche con mantequilla + doble queso + tocino + cebolla crispy + salsa bbq'},
+            { nombre: 'COMBO CRISPY BBQ', imagen: 'IMG/hamburguesa-8.webp', precio: '31.900', descripcion: '1 Sandwich Crispy BBQ + 1 Papa Pequena + 1 Gaseosa Pet'},
+
+
+            
+            
+
+        ];
+
+        hamburguesas.forEach(function (hamburguesa) {
+            let containerCol = createHamburguesa(hamburguesa.nombre, hamburguesa.imagen, hamburguesa.precio, hamburguesa.descripcion);
+            divRow.appendChild(containerCol);
+        });
+
+
+        
+
+
+
+
+
+
+
+        
+
+    </script>
+</body>
+</html>
