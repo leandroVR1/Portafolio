@@ -1,0 +1,104 @@
+// Crear un navbar
+var navbar = document.createElement('nav');
+navbar.className = 'navbar navbar-light';
+navbar.style.backgroundColor = 'rgba(255, 0, 0, 0.945)';
+
+var navbarBrand = document.createElement('a');
+navbarBrand.className = 'navbar-brand';
+navbarBrand.href = '#';
+
+var navbarImg = document.createElement('img');
+navbarImg.src = 'IMG/kfc.svg';
+navbarImg.width = '80';
+navbarImg.height = '80';
+navbarImg.className = 'd-inline-block vertical-align-top';
+
+navbarBrand.appendChild(navbarImg);
+navbarBrand.appendChild(document.createTextNode('KFC'));
+navbar.appendChild(navbarBrand);
+
+// Crear un div con una selección de idioma y un selector de tema
+var divContainer = document.createElement('div');
+divContainer.className = 'container-md-3';
+
+var divRow = document.createElement('div');
+divRow.className = 'row';
+
+var divCol1 = document.createElement('div');
+divCol1.className = 'col-md-6';
+
+var selectIdioma = document.createElement('select');
+selectIdioma.className = 'form-select form-select-lg mb-3';
+selectIdioma.name = '';
+selectIdioma.id = '';
+
+var option1 = document.createElement('option');
+option1.text = 'Seleccione un idioma';
+option1.selected = true;
+
+var option2 = document.createElement('option');
+option2.value = 'español';
+option2.text = 'Español';
+
+var option3 = document.createElement('option');
+option3.value = 'ingles';
+option3.text = 'Ingles';
+
+selectIdioma.appendChild(option1);
+selectIdioma.appendChild(option2);
+selectIdioma.appendChild(option3);
+
+divCol1.appendChild(selectIdioma);
+
+var divCol2 = document.createElement('div');
+divCol2.className = 'col-md-6';
+
+var selectTema = document.createElement('select');
+selectTema.className = 'form-select form-select-lg mb-3';
+selectTema.id = 'theme';
+selectTema.onchange = function() {change_theme()};
+
+var option4 = document.createElement('option');
+option4.text = 'Seleccione tema';
+option4.selected = true;
+
+var option5 = document.createElement('option');
+option5.value = 'claro';
+option5.text = 'Claro';
+
+var option6 = document.createElement('option');
+option6.value = 'oscuro';
+option6.text = 'Oscuro';
+
+var option7 = document.createElement('option');
+option7.value = 'rojo';
+option7.text = 'Rojo';
+
+selectTema.appendChild(option4);
+selectTema.appendChild(option5);
+selectTema.appendChild(option6);
+selectTema.appendChild(option7);
+
+divCol2.appendChild(selectTema);
+
+divRow.appendChild(divCol1);
+divRow.appendChild(divCol2);
+
+divContainer.appendChild(divRow);
+
+// Añadir el navbar y el divContainer al body
+document.body.appendChild(navbar);
+document.body.appendChild(divContainer);
+
+// Función para cambiar el tema
+function change_theme() {
+    var selectedTheme = document.getElementById('theme').value;
+
+    if (selectedTheme === 'claro') {
+        // Cambiar a tema claro
+    } else if (selectedTheme === 'oscuro') {
+        // Cambiar a tema oscuro
+    } else if (selectedTheme === 'rojo') {
+        // Cambiar a tema rojo
+    }
+}
